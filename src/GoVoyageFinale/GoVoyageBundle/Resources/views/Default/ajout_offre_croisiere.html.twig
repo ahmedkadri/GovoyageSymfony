@@ -1,0 +1,24 @@
+{% extends "GoVoyageBundle:Default:backoffice.html.twig" %}
+
+{% block ajout_croi %}
+
+
+<center><h3>Formulaire D'Ajout D'Offre De Croisiere</h3></center>
+<form method="POST" action="{{path('go_voyage_ajout_offre_crois',{idcroisiere:croisiere.idcroisiere})}}">
+    <center>
+        
+        
+
+        
+        
+         <br><br>
+        
+        {{form_widget(form)}}
+        
+
+</center>
+
+</form>
+
+ 
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "GoVoyageBundle:Default:backoffice.html.twig" %}
+
+{% block ajout_croi %}          
+
+ <div class="box">
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+               
+       
+             
+          <thead>
+    <tr> 
+        <td> Nom crois</td>
+        <td> Prix </td>
+        <td> nombre place </td>
+        <td> Date depart </td>
+        <td> nb jour </td>
+        <td> ville depart </td>
+        <td> ville destination </td>
+        <td> Description </td>
+        
+        <td> Creation D'offre </td>
+    </tr>
+     </thead>
+   {% for x in croisiere %}
+       
+       <tbody>
+        <tr>
+        <td>{{x.nomcrois}}</td>    
+        <td>{{x.prix}}</td>
+        <td>{{x.nombreplace}}</td>
+        <td>{{x.datedepart}}</td>
+        <td>{{x.nbjour}}</td>
+        <td>{{x.villedepart}}</td>
+        <td>{{x.villedestination}}</td>
+        <td>{{x.description}}</td>
+        <td><a href="{{path("go_voyage_ajout_offre_crois",{idcroisiere:x.idcroisiere})}}">Ajout Offre</a></td>
+
+        
+        </tr>
+        
+        </tbody>
+    {% endfor %}
+ 
+    </table>
+    
+            </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,69 @@
+{% extends "GoVoyageBundle:Default:backoffice.html.twig" %}
+
+{% block ajout_croi %}
+
+
+
+<center><h3>Liste de Hotel</h3></center>
+
+    {% for x in hotel %}
+      <center>
+                <fieldset style="width:310px;">    
+        <legend> Offre hotel{{x.idhotel}}</legend>
+        
+       <table>
+      <tr>
+        <td><b>Nom hotel:</b> {{x.nomhotel}}<br></td>
+    </tr>
+     <tr>
+        <td><b>nombre etoile:</b> {{x.nbetoile}}<br></td>
+    </tr>
+    <tr>
+        <td><b>Description:</b> {{x.description}}<br></td>
+    </tr>
+    
+     <tr>
+        <td><b>chambre type:</b> {{x.chambretype}}<br></td>
+    </tr>
+    
+       <tr>
+        <td><b>ville:</b> {{x.ville}}<br></td>
+    </tr> 
+    
+     <tr>
+        <td><b>nombreplace:</b> {{x.nombreplace}}<br></td>
+    </tr>
+    
+    
+    <tr>
+        <td><b>PrixPc:</b> {{x.prixpc}}<br></td>
+    </tr>
+     <tr>
+        <td><b>PrixDp:</b> {{x.prixdp}}<br></td>
+    </tr>
+     <tr>
+        <td><b>PrixLPD:</b> {{x.prixlpd}}<br></td>
+    </tr>
+    
+    
+     <tr>
+         photo:</b> {{x.photo}}<br></td>
+    </tr>
+    
+ 
+    
+
+    
+    
+     </table>
+      
+               <a href="{{path("go_voyage_modif_hotel",{idhotel:x.idhotel})}}">Modifier</a> <a href="{{path("go_voyage_supp_hotel",{idhotel:x.idhotel})}}">Supprimer</a>
+
+
+                </fieldset>
+               
+            </center>
+{% endfor %}
+
+{{ knp_pagination_render(hotel) }}
+{% endblock %}

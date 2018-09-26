@@ -1,0 +1,58 @@
+{% extends "GoVoyageBundle:Default:backoffice.html.twig" %}
+
+{% block ajout_croi %}
+
+
+
+
+<center><h3>Liste de Vol</h3></center>
+
+    {% for x in vol %}
+      <center>
+                <fieldset style="width:310px;">    
+        <legend> vol{{x.idvol}}</legend>
+        
+       <table>
+           
+        <tr>
+        <td><b>Prix:</b> {{x.prix}}<br></td>
+       </tr>    
+           
+           
+      <tr>
+        <td><b>nombre place:</b> {{x.nombreplace}}<br></td>
+    </tr>
+     <tr>
+        <td><b>date vol:</b> {{x.datevol|date('Y/M/D')}}<br></td>
+    </tr>
+    <tr>
+        <td><b>pays destination:</b> {{x.paysdestination}}<br></td>
+    </tr>
+    
+     <tr>
+        <td><b>pays depart:</b> {{x.paysdepart}}<br></td>
+    </tr>
+    
+       <tr>
+        <td><b>description:</b> {{x.description}}<br></td>
+    </tr> 
+    
+     <tr>
+        <td><b>nomvol:</b> {{x.nomvol}}<br></td>
+    </tr>
+    
+    
+
+    
+    
+     </table>
+      
+               <a href="{{path("go_voyage_modif_vol",{idvol:x.idvol})}}">Modifier</a> <a href="{{path("go_voyage_supp_vol",{idvol:x.idvol})}}">Supprimer</a>
+
+
+                </fieldset>
+            </center>
+{% endfor %}
+
+
+{% endblock %}

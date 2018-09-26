@@ -1,0 +1,21 @@
+{% extends "GoVoyageBundle:Default:backoffice.html.twig" %}
+
+{% block ajout_croi %}
+
+<center><h3>Formulaire D'Ajout De Modifiaction Offre Vol</h3></center>
+<form method="POST" action="{{path('go_voyage_modif_off_vol',{idvol:offre_vol.idvol})}}">
+
+      <center>   
+    
+    <br><br>
+        
+      {{form_widget(form)}}
+ 
+
+{{form_rest(form)}}
+</center>
+
+</form>
+
+ 
+{% endblock %}

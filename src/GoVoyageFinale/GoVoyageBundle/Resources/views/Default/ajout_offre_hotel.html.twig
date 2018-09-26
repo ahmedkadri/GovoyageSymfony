@@ -1,0 +1,22 @@
+{% extends "GoVoyageBundle:Default:backoffice.html.twig" %}
+
+{% block ajout_croi %}
+
+<center><h3>Formulaire D'Ajout D'Offre D'Hotel</h3></center>
+<form method="POST" action="{{path('go_voyage_ajout_offre_hotel',{idhotel:hotel.idhotel})}}">
+    <center>
+        
+
+        
+    <br><br><br>
+
+    
+    {{form_widget(form)}}
+ 
+
+
+</center>
+
+</form>
+
+ {% endblock %}

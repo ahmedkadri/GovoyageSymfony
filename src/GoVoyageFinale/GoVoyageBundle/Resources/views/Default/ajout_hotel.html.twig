@@ -1,0 +1,63 @@
+{% extends "GoVoyageBundle:Default:backoffice.html.twig" %}
+
+{% block ajout_croi %}
+
+<center><h3>Formulaire D'Ajout D'Hotel</h3></center>
+<form method="POST">
+    <center>
+     <table>
+<tr>
+        <td>nom hotel  </td>
+        <td>{{form_widget(form.nomhotel)}}</td>
+</tr> 
+<tr>
+        <td>nb etoile </td>
+        <td>{{form_widget(form.nbetoile)}}</td>
+</tr>    
+
+ <tr>
+        <td>Description </td>
+        <td>{{form_widget(form.description)}}</td>
+ </tr>
+ 
+
+ <tr>
+        <td>chambre type  </td>
+        <td>{{form_widget(form.chambretype)}}</td>
+ </tr>
+ 
+ <tr>
+        <td>ville </td>
+        <td>{{form_widget(form.ville)}}</td>
+ </tr>
+ 
+  <tr>
+        <td>nombre place </td>
+        <td>{{form_widget(form.nombreplace)}}</td>
+ </tr>
+  <tr>
+        <td>prix pc </td>
+        <td>{{form_widget(form.prixpc)}}</td>
+ </tr>
+  <tr>
+        <td>prix dp </td>
+        <td>{{form_widget(form.prixdp)}}</td>
+ </tr>
+  <tr>
+        <td>prix lpd </td>
+        <td>{{form_widget(form.prixlpd)}}</td>
+ </tr>
+  <tr>
+        <td>photo </td>
+        <td>{{form_widget(form.photo)}}</td>
+ </tr>
+    </table>
+ 
+
+{{form_rest(form)}}
+</center>
+
+</form>
+
+ 
+{% endblock %}

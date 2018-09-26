@@ -1,0 +1,59 @@
+{% extends "GoVoyageBundle:Default:backoffice.html.twig" %}
+
+
+
+{% block ajout_croi %}
+    
+     
+    
+        <div class="box">
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+               
+       
+             
+          <thead>           
+    <tr> 
+        <td> Nom hotel</td>
+        <td> nombre etoile </td>
+        <td> Description </td>
+        <td> chambre type </td>
+        <td> ville </td>
+        <td> nombreplace </td>
+        <td> PrixPc </td>
+        <td> PrixDp </td>
+        <td> PrixLPD: </td>
+        <td> photo </td>
+        
+        <td> Creation D'offre </td>
+    </tr>
+    </thead>
+    
+      
+   {% for x in hotel %}
+       <tbody>
+        <tr>
+        <td>{{x.nomhotel}}</td>    
+        <td>{{x.nbetoile}}</td>
+        <td>{{x.description}}</td>
+        <td>{{x.chambretype}}</td>
+        <td>{{x.ville}}</td>
+        <td>{{x.nombreplace}}</td>
+        <td>{{x.prixpc}}</td>
+        
+        <td>{{x.prixdp}}</td>
+        <td>{{x.prixlpd}}</td>
+        <td>{{x.photo}}</td>
+        <td><a href="{{path("go_voyage_ajout_offre_hotel",{idhotel:x.idhotel})}}">Ajout Offre</a></td>
+
+        </tr>
+   </tbody>
+    {% endfor %}
+        
+    
+    </table>
+    
+            </div>
+    </div>
+              
+    {% endblock %}

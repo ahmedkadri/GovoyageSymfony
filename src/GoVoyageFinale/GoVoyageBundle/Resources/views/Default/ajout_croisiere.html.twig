@@ -1,0 +1,61 @@
+{% extends "GoVoyageBundle:Default:backoffice.html.twig" %}
+
+{% block ajout_croi %}
+
+<center><h3>Formulaire D'Ajout D'Hotel</h3></center>
+<form method="POST">
+    <center>
+     <table>
+<tr>
+        <td>nom croisiere  </td>
+        <td>{{form_widget(form.nomcrois)}}</td>
+</tr> 
+  <tr>
+        <td>prix  </td>
+        <td>{{form_widget(form.prix)}}</td>
+ </tr>
+ 
+ <tr>
+        <td>nombre place </td>
+        <td>{{form_widget(form.nombreplace)}}</td>
+ </tr>
+ 
+ 
+ 
+<tr>
+        <td>date depart </td>
+        <td>{{form_widget(form.datedepart)}}</td>
+</tr>    
+
+
+ 
+
+ <tr>
+        <td>nb jour  </td>
+        <td>{{form_widget(form.nbjour)}}</td>
+ </tr>
+ 
+ <tr>
+        <td>ville depart </td>
+        <td>{{form_widget(form.villedepart)}}</td>
+ </tr>
+ 
+  <tr>
+        <td>ville destination </td>
+        <td>{{form_widget(form.villedestination)}}</td>
+ </tr>
+
+ <tr>
+        <td>Description </td>
+        <td>{{form_widget(form.description)}}</td>
+ </tr>
+    </table>
+ 
+
+{{form_rest(form)}}
+</center>
+
+</form>
+
+ 
+{% endblock %}

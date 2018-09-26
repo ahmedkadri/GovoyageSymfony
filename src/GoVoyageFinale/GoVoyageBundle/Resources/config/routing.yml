@@ -1,0 +1,162 @@
+go_voyage_listehotel:
+    path:     /liste_hotel
+    defaults: { _controller: GoVoyageBundle:Default:liste_hotel }
+
+
+go_voyage_listehotel2:
+    path:     /liste_hotels
+    defaults: { _controller: GoVoyageBundle:Default:liste_hotel2 }
+    
+    
+go_voyage_liste_offre_hotel:
+    path:     /liste_offhotel
+    defaults: { _controller: GoVoyageBundle:Default:liste_offre_hotel }
+    
+    
+go_voyage_liste_vol:
+    path:     /liste_vol
+    defaults: { _controller: GoVoyageBundle:Default:liste_vol } 
+    
+go_voyage_listevol2:
+    path:     /liste_volss
+    defaults: { _controller: GoVoyageBundle:Default:liste_vol2 } 
+    
+    
+go_voyage_liste_offre_vol:
+    path:     /liste_offvol
+    defaults: { _controller: GoVoyageBundle:Default:liste_offre_vol }
+    
+    
+go_voyage_liste_croisiere:
+    path:     /liste_crois
+    defaults: { _controller: GoVoyageBundle:Default:liste_croisiere } 
+    
+    
+    
+go_voyage_listcrois2:
+    path:     /listecroisss
+    defaults: { _controller: GoVoyageBundle:Default:liste_croisiere2 } 
+    
+    
+    
+    
+    
+go_voyage_liste_offre_croisiere:
+    path:     /liste_offcrois
+    defaults: { _controller: GoVoyageBundle:Default:liste_offre_croisiere }
+    
+  
+
+go_voyage_ajouthotel:
+    path:     /ajout_hotel
+    defaults: { _controller: GoVoyageBundle:Default:ajout_hotel }
+    
+    
+go_voyage_ajoutvol:
+    path:     /ajout_vol
+    defaults: { _controller: GoVoyageBundle:Default:ajout_vol }
+    
+go_voyage_ajoutcrois:
+    path:     /ajout_crois
+    defaults: { _controller: GoVoyageBundle:Default:ajout_crois }
+    
+    
+    
+go_voyage_ajout_offre_vol:
+    path:     /ajout_offvol/{idvol}
+    defaults: { _controller: GoVoyageBundle:Default:ajout_offre_vol}
+    
+    
+go_voyage_ajout_offre_crois:
+    path:     /ajout_offcrois/{idcroisiere}
+    defaults: { _controller: GoVoyageBundle:Default:ajout_offre_crois}
+    
+    
+go_voyage_ajout_offre_hotel:
+    path:     /ajout_offhotel/{idhotel}
+    defaults: { _controller: GoVoyageBundle:Default:ajout_offre_hotel}
+    
+    
+    
+    
+go_voyage_supp_crois:
+    path:     /sup-crois/{idcroisiere}
+    defaults: { _controller: GoVoyageBundle:Default:supp_crois}
+
+go_voyage_supp_vol:
+    path:     /sup-vol/{idvol}
+    defaults: { _controller: GoVoyageBundle:Default:supp_vol}
+    
+    
+go_voyage_supp_hotel:
+    path:     /sup-hotel/{idhotel}
+    defaults: { _controller: GoVoyageBundle:Default:supp_hotel}
+    
+    
+go_voyage_supp_off_hotel:
+    path:     /sup-off-hotel/{idhotel}
+    defaults: { _controller: GoVoyageBundle:Default:supp_off_hotel}   
+    
+    
+go_voyage_supp_off_vol:
+    path:     /sup-off-vol/{idvol}
+    defaults: { _controller: GoVoyageBundle:Default:supp_off_vol}
+
+
+go_voyage_supp_off_crois:
+    path:     /sup-off-crois/{idcroisiere}
+    defaults: { _controller: GoVoyageBundle:Default:supp_off_crois}
+    
+    
+
+go_voyage_modif_hotel:
+    path:     /modif-hotel/{idhotel}
+    defaults: { _controller: GoVoyageBundle:Default:modif_hotel}
+    
+go_voyage_modif_vol:
+    path:     /modif-vol/{idvol}
+    defaults: { _controller: GoVoyageBundle:Default:modif_vol}
+    
+    
+go_voyage_modif_crois:
+    path:     /modif-crois/{idcroisiere}
+    defaults: { _controller: GoVoyageBundle:Default:modif_crois}
+    
+    
+    
+go_voyage_modif_off_crois:
+    path:     /modif-off-crois/{idcroisiere}
+    defaults: { _controller: GoVoyageBundle:Default:modif_off_crois}
+    
+    
+    
+go_voyage_modif_off_hotel:
+    path:     /modif-off-hotel/{idhotel}
+    defaults: { _controller: GoVoyageBundle:Default:modif_off_hotel}
+    
+    
+    
+go_voyage_modif_off_vol:
+    path:     /modif-off-vol/{idvol}
+    defaults: { _controller: GoVoyageBundle:Default:modif_off_vol}
+    
+    
+    
+
+    
+    
+go_voyage_bcf:
+    path:     /bcf
+    defaults: { _controller: GoVoyageBundle:Default:bcf }
+    
+
+go_voyage_fof:
+    path:     /fof
+    defaults: { _controller: GoVoyageBundle:Default:fof }
+    
+    
+    
+    
+go_voyage_map:
+    path:     /map
+    defaults: { _controller: GoVoyageBundle:Default:map }

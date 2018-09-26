@@ -1,0 +1,92 @@
+{% extends "GoVoyageBundle:Default:backoffice.html.twig" %}
+
+{% block ajout_croi %}
+
+<center>
+
+<center><h3>Liste de Offre Hotel</h3></center>
+
+    {% for x in offre_hotel %}
+        
+               <div class="box box-success box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Offre hotel{{x.idhotel}}</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+              <!-- /.box-tools -->
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+      
+                <fieldset style="width:310px;">    
+       
+        
+       <table>
+       
+        <tr>
+        <td><b>reduction:</b> {{x.reduction}}<br></td>
+        </tr>
+           
+           
+      <tr>
+        <td><b>Nom hotel:</b> {{x.nomhotel}}<br></td>
+    </tr>
+    
+     <tr>
+        <td><b>ville:</b> {{x.ville}}<br></td>
+    </tr>
+    
+    <tr>
+        <td><b>Description:</b> {{x.description}}<br></td>
+    </tr>
+    
+    <tr>
+        <td><b>Date Debut:</b> {{x.dateDebut|date('Y/M/D')}}<br></td>
+    </tr>
+    <tr>
+        <td><b>Date Fin:</b> {{x.dateFin|date('Y/M/D')}}<br></td>
+    </tr>
+    
+    
+     <tr>
+        <td><b>PrixPc:</b> {{x.prixpc}}<br></td>
+    </tr>
+     <tr>
+        <td><b>PrixDp:</b> {{x.prixdp}}<br></td>
+    </tr>
+     <tr>
+        <td><b>PrixLPD:</b> {{x.prixlpd}}<br></td>
+    </tr>
+    
+     <tr>
+        <td><b>chambre type:</b> {{x.chambretype}}<br></td>
+    </tr>
+    
+     <tr>
+        <td><b>nombre etoile:</b> {{x.nbetoiles}}<br></td>
+    </tr>
+    
+     <tr>
+        <td><b>Disponibiliter:</b> {{x.disponibiliter}}<br></td>
+    </tr>    
+ 
+    
+
+    
+    
+     </table>
+      
+               <a href="{{path("go_voyage_modif_off_hotel",{idhotel:x.idhotel})}}">Modifier</a> <a href="{{path("go_voyage_supp_off_hotel",{idhotel:x.idhotel})}}">Supprimer</a>
+
+
+                </fieldset>
+           
+               </div>
+            <!-- /.box-body -->
+          </div>
+{% endfor %}
+ {{ knp_pagination_render(offre_hotel) }}
+</center>
+{% endblock %}

@@ -1,0 +1,6 @@
+
+
+go_voyage:
+    resource: "@GoVoyageBundle/Resources/config/routing.yml"
+    prefix:   /
+
